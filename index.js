@@ -1,11 +1,16 @@
 module.exports = {
     gattDefs: {
         service: [
+            { name: 'dInServ', uuid: '0xbb00' },
+            { name: 'aInServ', uuid: '0xbb10' },
             { name: 'pwrAndCurrServ', uuid: '0xbb30' },
             { name: 'relayServ', uuid: '0xbb40' }
         ],
         characteristic: [
-            { name: 'pwrAndCurrMeasPeriod', uuid: '0xbb31', params: ['period'], types: ['uint8'] }
+            { name: 'aInConfig', uuid: '0xbb11', params: ['config'], types: ['boolean'] },
+            { name: 'aInMeasPeriod', uuid: '0xbb12', params: ['period'], types: ['uint8'] },
+            { name: 'pwrAndCurrConfig', uuid: '0xbb31', params: ['config'], types: ['boolean'] },
+            { name: 'pwrAndCurrMeasPeriod', uuid: '0xbb32', params: ['period'], types: ['uint8'] }
         ]
      },
      examine: function (periph, basicInfo) {
