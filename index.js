@@ -4,7 +4,8 @@ module.exports = {
             { name: 'dInServ', uuid: '0xbb00' },
             { name: 'aInServ', uuid: '0xbb10' },
             { name: 'meteringServ', uuid: '0xbb30' },
-            { name: 'relayServ', uuid: '0xbb40' }
+            { name: 'relayServ', uuid: '0xbb40' },
+            { name: 'pirServ', uuid: '0xbb90' }
         ],
         characteristic: [
             { name: 'aInConfig', uuid: '0xbb11', params: ['config'], types: ['boolean'] },
